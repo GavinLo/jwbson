@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{BB85C16B-B65D-4861-8EAE-D8D43062A35F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>jwbson</RootNamespace>
+    <AssemblyName>jwbson</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\jw\attr\SerializedField.cs">
+      <Link>attr\SerializedField.cs</Link>
+    </Compile>
+    <Compile Include="..\jw\attr\SerializedPermission.cs">
+      <Link>attr\SerializedPermission.cs</Link>
+    </Compile>
+    <Compile Include="..\jw\bson\Bson.cs">
+      <Link>bson\Bson.cs</Link>
+    </Compile>
+    <Compile Include="..\jw\core\Endian.cs">
+      <Link>core\Endian.cs</Link>
+    </Compile>
+    <Compile Include="..\jw\core\Flags.cs">
+      <Link>core\Flags.cs</Link>
+    </Compile>
+    <Compile Include="..\jw\utils\BitUtils.cs">
+      <Link>utils\BitUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\jw\utils\ReflectUtils.cs">
+      <Link>utils\ReflectUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\jw\utils\StreamUtils.cs">
+      <Link>utils\StreamUtils.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

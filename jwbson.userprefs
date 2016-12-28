@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="jwbson/jwbson.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="jwbson/Program.cs">
+    <Files>
+      <File FileName="jwbson/Program.cs" Line="155" Column="37" />
+      <File FileName="jw/bson/Bson.cs" Line="147" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
