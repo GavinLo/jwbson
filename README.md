@@ -10,7 +10,7 @@
 
 ##用法 - Usage
 ###序列化 - Serialize
-
+	```csharp
 	public class A {
 		[jw.SerializedField]
 		public int MyInt = 123;
@@ -32,9 +32,11 @@
 	var j = new jw.Jwon(jw.Jwon.ContextJson);
 	j.Serialize(a, f);
 	f.Close();
+	```
 	
 ###反序列化 - Deserialize
-
+	
+	```csharp
 	// bson
 	var f = File.Open(“test.bson”, FileMode.Open);
 	var a = new A();
@@ -48,10 +50,12 @@
 	var j = new jw.Jwon(jw.Jwon.ContextJson);
 	j.Deserialize(f, a);
 	f.Close();
+	```
 	
 ###反序列化 - Deserialize
 __不使用原数据结构，使用类似的数据结构 - deserialize to a new similar data structure__
 
+	```csharp
 	public class C {
 		[jw.SerializedField]
 		public int MyInt;
@@ -73,3 +77,4 @@ __不使用原数据结构，使用类似的数据结构 - deserialize to a new 
 	var j = new jw.Jwon(jw.Jwon.ContextJson);
 	j.Deserialize(f, c);
 	f.Close();
+	```
