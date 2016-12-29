@@ -79,8 +79,8 @@ j.Deserialize(f, c);
 f.Close();
 ```
 
-###定义Context - Define Context
-__定义Serializer的Context，可以让数据格式变成定制格式 - Define the Serializer’s Context can make custom data storage__
+###定义Context - Custom Context
+__定义Serializer的Context，可以让数据格式变成定制格式 - Custom Context can make custom data storage__
 
 
 ```csharp
