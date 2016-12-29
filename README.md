@@ -78,3 +78,19 @@ var j = new jw.Jwon(jw.Jwon.ContextJson);
 j.Deserialize(f, c);
 f.Close();
 ```
+
+###定义Context - Define Context
+__定义Serializer的Context，可以让数据格式变成定制格式 - Define the Serializer’s Context can make custom data storage__
+
+
+```csharp
+public class BsonContext11Min : BsonContext11 {
+
+	public override bool Float32AsDouble {
+		get {
+			return true; // 减少存储数据量 - lightweight float storage
+		}
+	}
+
+}
+```
